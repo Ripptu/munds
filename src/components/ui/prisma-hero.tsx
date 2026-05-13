@@ -84,16 +84,17 @@ export const WordsPullUpMultiStyle = ({ segments, className = "", style }: Words
 /* ---------------- Hero ---------------- */
 const PrismaHero = () => {
   return (
-    <section className="h-screen w-full relative overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="min-h-[100svh] w-full relative overflow-hidden flex flex-col justify-end">
+      <div className="absolute inset-0 pointer-events-none">
         <img
           src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_2zg6kRsQgLvpBAc5mmGVtMaqZi0%2Fhf_20260513_191715_f4d7c902-5e98-454f-baaa-d6eebaa11cb0.png&w=1280&q=85"
           alt="Hero Background"
+          draggable={false}
           className="absolute inset-0 h-full w-full object-cover"
         />
 
         {/* Gradient overlay */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
       </div>
 
       {/* Hero content */}
@@ -101,7 +102,7 @@ const PrismaHero = () => {
         <div className="flex flex-col items-start text-left gap-6 lg:gap-10 pb-10">
           
           <h1
-            className="font-serif leading-[0.9] tracking-tighter text-[15vw] md:text-[8vw] flex flex-col items-start"
+            className="font-serif leading-[0.9] tracking-tighter text-[15vw] md:text-[11vw] lg:text-[8vw] flex flex-col items-start"
             style={{ color: "#E1E0CC" }}
           >
             <WordsPullUp text="Sonnenschutz" />
@@ -109,7 +110,7 @@ const PrismaHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="block font-sans text-lg md:text-3xl mt-4 uppercase tracking-[0.2em] font-bold text-brand"
+              className="block font-sans text-lg md:text-2xl lg:text-3xl mt-4 uppercase tracking-[0.2em] font-bold text-brand whitespace-nowrap"
             >
               Maßgefertigt & Exklusiv
             </motion.span>

@@ -10,3 +10,16 @@
   --color-text-main: #F5F5F5; /* Light Text */
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    overflow-x: hidden;
+    background-color: var(--color-neutral-base);
+    color: var(--color-text-main);
+  }
+}
+

@@ -7,32 +7,32 @@ const vorteile = [
   { 
     title: "Premium Qualität", 
     text: "Hochwertige Komponenten Made in Germany für höchste Langlebigkeit und Funktionalität in Ihrem Zuhause.",
-    className: "md:col-span-2"
+    className: "lg:col-span-2 md:col-span-2"
   },
   { 
     title: "Maßarbeit", 
     text: "Passgenaue Fertigung für jede bauliche Herausforderung.",
-    className: "md:col-span-1"
+    className: "lg:col-span-1 md:col-span-1"
   },
   { 
     title: "Direktvertrieb", 
     text: "30-40% Preisvorteil dank Verzicht auf Zwischenhandel – Qualität bezahlbar gemacht.",
-    className: "md:col-span-1"
+    className: "lg:col-span-1 md:col-span-1"
   },
   { 
     title: "Montageservice", 
     text: "Fachgerechter Einbau durch erfahrene Monteure für ein makelloses, sicheres Ergebnis.",
-    className: "md:col-span-2"
+    className: "lg:col-span-2 md:col-span-2"
   },
   { 
     title: "Fachberatung", 
     text: "Individuelle Lösungen & Planung bei Ihnen vor Ort.",
-    className: "md:col-span-1"
+    className: "lg:col-span-1 md:col-span-1"
   },
   { 
     title: "Schnelle Lieferung", 
     text: "Kurze Lieferzeiten und zuverlässige Terminabsprachen.",
-    className: "md:col-span-1"
+    className: "lg:col-span-1 md:col-span-1"
   },
 ];
 
@@ -55,7 +55,7 @@ export const Vorteile = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-7xl mx-auto">
           {vorteile.map((item, i) => (
             <motion.div
               key={i}

@@ -24,7 +24,7 @@ export function Layout() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-base text-text-main selection:bg-brand/20 overflow-x-hidden w-full relative">
+    <div className="min-h-[100svh] bg-neutral-base text-text-main selection:bg-brand/20 relative">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 p-6 md:p-10 flex items-center justify-between pointer-events-none">
         <div className="pointer-events-auto">
@@ -33,7 +33,7 @@ export function Layout() {
           </Link>
         </div>
         
-        <nav className="hidden md:flex gap-10 font-bold uppercase tracking-widest text-xs pointer-events-auto">
+        <nav className="hidden md:flex gap-6 lg:gap-10 font-bold uppercase tracking-widest text-xs pointer-events-auto">
           {navLinks.map(item => (
             <a 
               key={item.name} 

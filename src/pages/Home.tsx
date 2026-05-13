@@ -32,6 +32,7 @@ export default function Home() {
             
             {/* Stat 1 */}
             <motion.div 
+              style={{ willChange: "transform, opacity" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-24 px-10 text-center">
+      <section className="py-20 lg:py-24 px-6 md:px-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-2xl md:text-3xl leading-relaxed font-serif italic text-text-main">
                 Erleben Sie Premium-Qualität für Sonnenschutz, Fenster, Haustüren und Garagentore – direkt vom Hersteller, ohne kostenintensiven Zwischenhandel.
@@ -119,17 +120,19 @@ export default function Home() {
       </section>
 
       {/* Geschichte */}
-      <section id="geschichte" className="py-32 px-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+      <section id="geschichte" className="py-20 md:py-32 px-6 md:px-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <img 
+             <img 
               src="https://formazin-partner.de/images/team-hochformat.jpg" 
               alt="M&S Bauelemente Team" 
-              className="w-full h-[600px] object-cover object-center rounded-lg shadow-2xl brightness-90"
+              loading="lazy"
+              draggable={false}
+              className="w-full h-[400px] lg:h-[600px] object-cover object-center rounded-lg shadow-2xl brightness-90 relative z-10"
             />
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="font-serif text-6xl tracking-tighter mb-10 leading-none">Unsere<br/> Geschichte</h2>
+              <h2 className="font-serif text-5xl md:text-6xl tracking-tighter mb-8 lg:mb-10 leading-none">Unsere<br/> Geschichte</h2>
               <div className="text-lg text-text-main/80 space-y-6 leading-relaxed">
                 <p>Handwerk hat bei uns Tradition – und das seit Generationen. Bereits mein Großvater legte den Grundstein als Rollladen- und Sonnenschutzmechaniker.</p>
                 <p>Ich selbst bin in diesem Handwerk aufgewachsen. Heute verbinde ich traditionelle Handwerkskunst mit modernen Lösungen.</p>
@@ -143,8 +146,8 @@ export default function Home() {
       <Vorteile />
 
       {/* Kontakt */}
-      <section id="kontakt" className="py-32 px-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <section id="kontakt" className="py-20 lg:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <div>
                 <h2 className="font-serif text-6xl tracking-tighter mb-10">Kontakt</h2>
                 <div className="text-xl space-y-2">
