@@ -4,6 +4,7 @@ import { FormEvent } from "react";
 import { Testimonials } from "../components/ui/Testimonials";
 import { Vorteile } from "../components/ui/Vorteile";
 import { PrismaHero } from "../components/ui/prisma-hero";
+import { Counter } from "../components/ui/Counter";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -40,7 +41,7 @@ export default function Home() {
               className="flex flex-col items-center text-center group"
             >
               <div className="flex items-baseline mb-4 text-brand group-hover:scale-105 transition-transform duration-500">
-                <span className="text-6xl md:text-7xl font-serif font-medium tracking-tighter">55</span>
+                <Counter to={55} className="text-6xl md:text-7xl font-serif font-medium tracking-tighter" />
                 <span className="text-2xl md:text-3xl ml-3 text-white/90 font-serif font-medium">Jahre</span>
               </div>
               <div className="h-px w-12 bg-brand/30 mb-6 group-hover:w-24 group-hover:bg-brand transition-all duration-500 ease-out" />
@@ -58,7 +59,7 @@ export default function Home() {
               className="flex flex-col items-center text-center group"
             >
               <div className="flex items-baseline mb-4 text-brand group-hover:scale-105 transition-transform duration-500">
-                <span className="text-6xl md:text-7xl font-serif font-medium tracking-tighter">3</span>
+                <Counter to={3} className="text-6xl md:text-7xl font-serif font-medium tracking-tighter" />
                 <span className="text-2xl md:text-3xl ml-3 text-white/90 font-serif font-medium">Gen.</span>
               </div>
               <div className="h-px w-12 bg-brand/30 mb-6 group-hover:w-24 group-hover:bg-brand transition-all duration-500 ease-out" />
@@ -93,7 +94,7 @@ export default function Home() {
               className="flex flex-col items-center text-center group"
             >
               <div className="flex items-baseline mb-4 text-brand group-hover:scale-105 transition-transform duration-500">
-                <span className="text-6xl md:text-7xl font-serif font-medium tracking-tighter">40</span>
+                <Counter to={40} className="text-6xl md:text-7xl font-serif font-medium tracking-tighter" />
                 <span className="text-4xl md:text-5xl ml-1 text-brand font-serif font-medium">%</span>
               </div>
               <div className="h-px w-12 bg-brand/30 mb-6 group-hover:w-24 group-hover:bg-brand transition-all duration-500 ease-out" />
@@ -144,6 +145,29 @@ export default function Home() {
 
       {/* Merkmale / Vorteile - REDESIGN */}
       <Vorteile />
+
+      {/* Partner */}
+      <section className="py-20 md:py-32 bg-white text-neutral-950 overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center px-6 md:px-10">
+            <h2 className="font-serif text-4xl md:text-5xl tracking-tighter mb-12 lg:mb-20">Unsere Partner</h2>
+        </div>
+        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_25%,black_75%,transparent)]">
+          <motion.div
+            style={{ willChange: "transform" }}
+            animate={{ x: "-50%" }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+            className="flex flex-none gap-16 md:gap-32 pr-16 md:pr-32 items-center opacity-80 hover:opacity-100 transition-opacity duration-500"
+          >
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex items-center gap-16 md:gap-32">
+                <img src="https://s1.directupload.eu/images/260520/kmcf589o.png" alt="Partner Logo 1" className="h-16 md:h-24 lg:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                <img src="https://s1.directupload.eu/images/260520/uhf6opoj.png" alt="Partner Logo 2" className="h-20 md:h-28 lg:h-32 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                <img src="https://s1.directupload.eu/images/260520/7rtbh4ms.jpg" alt="Partner Logo 3" className="h-24 md:h-32 lg:h-40 object-contain grayscale hover:grayscale-0 transition-all duration-300 rounded-xl md:rounded-2xl" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* Kontakt */}
       <section id="kontakt" className="py-20 lg:py-32 px-6 md:px-10">
